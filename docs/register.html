@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="/js/utils/include.js"></script>
+        <title> Register user </title> 
+   </head>
+
+
+<body>
+    <div id="header"></div>
+
+    <h1> Register a new user</h1>
+
+    <form>
+        <div class="input-block">
+            <label for="firstname-input">First name:</label>
+            <input type="text" name="firstname" id="firstname-input">
+        </div>
+
+        <div class="input-block">
+            <label for="lastname-input">Lastname:</label>
+            <input type="text" name="LastName" id="lastname-input">
+        </div>
+
+        <div class="input-block">
+            <label for="email-input">Email:</label>
+            <input type="email" name="email" id="email-input">
+        </div>
+
+        <div class="input-block">
+            <label for="telephone-input">Telephone:</label>
+            <input type="text" name="Telephone" id="telephone-input">
+        </div>
+
+        <div class="input-block">
+            <label for="password-input">Password:</label>
+            <input type="password" name="password" id="password-input">
+        </div>
+
+        <div class="input-block">
+            <input type="submit">
+        </div>
+    </form>
+
+    <hr>
+
+    <a href="index.html">Return to index</a>
+    <script>
+        include("header.html", "#header");
+    </script>
+</body>
+</html>
