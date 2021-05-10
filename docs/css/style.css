@@ -207,6 +207,14 @@ div.justify {
     padding-left: 6%;
     padding-right: 6%;
 }
+#borde7{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#photo-center{
+    text-align: center;
+}
 #privacidad{
     padding-left: 10%;
     padding-right: 10%;
