@@ -1,13 +1,11 @@
-"use strict";
+'use strict';
 
-import { parseHTML } from "/js/utils/parseHTML.js";
+import { parseHTML } from '../utils/parseHTML.js';
 
 // Aux function to get the div in which to display messages
 // It's centralized here so we can change it easily in the case its ID changes
-const msgsDivID = "errors";
-
 function getErrorsDiv() {
-    return document.getElementById(msgsDivID);
+    return document.getElementById("errors");
 }
 
 const messageRenderer = {
@@ -18,27 +16,23 @@ const messageRenderer = {
                         ${message}
                     </div>`;
         let errorsDiv = getErrorsDiv();
-
-        if (errorsDiv === null) {
-            console.error('You tried to render the following message, however, a ' +
-                `<div id="${msgsDivID}"> could not be found in your view to show it there:`);
-            console.error(message);
-            return;
-        }
-
         let messageElem = parseHTML(html);
         errorsDiv.appendChild(messageElem);
+    },
+
+    showErrorAsAlert: function (message) {
+        this.showMessageAsAlert(message, "danger");
     },
 
     showErrorMessage: function (message) {
         this.showMessageAsAlert(message, "danger");
     },
 
-    showWarningMessage: function (message) {
+    showWarningAsAlert: function (message) {
         this.showMessageAsAlert(message, "warning");
     },
 
-    showSuccessMessage: function (message) {
+    showSuccessAsAlert: function (message) {
         this.showMessageAsAlert(message, "success");
     },
 }

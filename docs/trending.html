@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Main page</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="icon" href="/images/favicon.ico">
+
+  <script src="/js/utils/include.js"></script>
+
+  <script src="/js/libs/jquery-3.4.1.min.js"> </script>
+  <script src="/js/libs/popper.min.js"></script>
+  <script src="/js/libs/bootstrap.min.js"></script>
+  <script src="/js/libs/axios.min.js"></script>
+
+  <script src="/js/libs/axios.min.js"></script>
+  <script src="js/trending.js" type="module"></script>
+  <script src="js/header.js" type="module"></script>
+
+
+</head>
+<div id="content2">
+
+  <body>
+    <div id="content2">
+      <div id="header"></div>
+      <div class="indexito">
+        <div class="card" id="nombredeperfil">
+          <br>
+          <h3>Top Trending</h3>
+          <br>
+        </div>
+        <br>
+        <div class="row text-center">
+
+
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="color">
+                <br>
+                <h3>Más Puntuación</h3>
+                <h6>Ultimos 7 Días</h6>
+                <hr>
+                <div id="bigRateFecha">
+                </div>
+                <hr>
+              </div>
+            </div>
+            <br>
+
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="color">
+                <br>
+                <h3>Fotos</h3>
+                <h6>Con mayor puntuación</h6>
+                <hr>
+                <div id="bigRate">
+                </div>
+                <hr>
+              </div>
+            </div>
+            <br>
+
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="color">
+                <br>
+                <h3>Usuarios</h3>
+                <h6>Con mas seguidores</h6>
+                <hr>
+                <div id="masSeguidores">
+                </div>
+                <hr>
+              </div>
+            </div>
+            <br>
+
+          </div>
+
+
+
+
+
+
+          <div class="col-md-4">
+            <div class="card" id="xd">
+              <h5>Más Comentarios</h5>
+              <h7>Ultimos 7 Días</h7>
+              <hr>
+
+              <div class="borde-2">
+                <div class="row text-center">
+
+                  <div id="masComentarios">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="color">
+                <br>
+                <h3>Instavip</h3>
+                <h6>2021</h6>
+                <hr>
+                <div align="center"><img src="/images/instavip.png" width="125" height="125"
+                  class="d-inline-block align-top" alt=""></div>
+                <hr>
+              </div>
+            </div>
+            <br>
+
+          </div>
+          <div class="col-md-4">
+            <div class="card" id="xd">
+              <h5>Categorias con más fotos</h5>
+              <h7>Ultimos 7 Días</h7>
+              <hr>
+              <div class="borde-2">
+                <div class="row text-center">
+                  <div id="masCategorias">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          </div>
+        </div>
+
+
+
+      </div>
+      <div id="footer"></div>
+  </body>
+  <script>
+    include("header.html", "#header");
+    include("footer.html", "#footer");
+  </script>
+</div>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Main page</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="icon" href="/images/favicon.ico">
+
+  <script src="/js/utils/include.js"></script>
+
+  <script src="/js/libs/jquery-3.4.1.min.js"> </script>
+  <script src="/js/libs/popper.min.js"></script>
+  <script src="/js/libs/bootstrap.min.js"></script>
+  <script src="/js/libs/axios.min.js"></script>
+
+  <script src="/js/libs/axios.min.js"></script>
+  <script src="js/user.js" type="module"></script>
+  <script src="js/header.js" type="module"></script>
+
+
+</head>
+<div id="content2">
+
+  <body>
+    <div id="content2">
+      <div id="header"></div>
+      <div class="indexito">
+        <div class="card" id="nombredeperfil">
+
+
+        </div>
+        <br>
+        <div class="row text-center">
+          <div class="col-md-6">
+
+
+
+
+            <div class="card" id="xd">
+              <div class="text-center">
+                <div class="container">
+                  <div class="col-sm-12">
+                    <div class="row" id="centrate">
+                      <div id="errors" class=""></div>
+                    <form id="form-follower">
+                      <div class="row">
+                        <div class="col-md text-center">
+                          <button type="submit" class="btn btn-primary" id="follow-buttom">
+                            <i class="fa fa-send mr-2 "></i> Seguir
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                    <form id="form-unfollower">
+
+                      <div class="col-md text-center">
+                        <button type="submit" class="btn btn-danger" id="unfollow-buttom">
+                          <i class="fa fa-send mr-2 "></i>Dejar de seguir
+                        </button>
+
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                  <br>
+                  <div class="row">
+                    <div class="col"><b>Publicaciones</b></div>
+                    <div class="col">1900</div>
+                    <hr>
+                    <div class="w-100"></div>
+                    <div class="col"><b>Seguidores</b></div>
+                    <div class="col">2</div>
+                    <hr>
+                    <div class="w-100"></div>
+                    <div class="col"><b>Siguiendo</b></div>
+                    <div class="col">23</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div id="perfil">
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card" id="xd">
+
+              <h5> FOTOS</h5>
+              <hr>
+
+              <div class="borde-2">
+                <div class="row text-center">
+
+                  <div id="blogperfil">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+      <div id="footer"></div>
+  </body>
+  <script>
+    include("header.html", "#header");
+    include("footer.html", "#footer");
+  </script>
+</div>
+
+</html>

@@ -1,0 +1,144 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="icon" href="/images/favicon.ico">
+
+    <script src="/js/utils/include.js"></script>
+
+    <script src="/js/libs/jquery-3.4.1.min.js"> </script>
+    <script src="/js/libs/popper.min.js"></script>
+    <script src="/js/libs/bootstrap.min.js"></script>
+    <script src="/js/libs/axios.min.js"></script>
+
+    <script src="/js/libs/axios.min.js"></script>
+    <script src="js/edit_photo.js" type="module"></script>
+    <script src="js/header.js" type="module"></script>
+
+    <title>Create/edit photo</title>
+</head>
+
+<body>
+    <div id="content2">
+        <div id="header"></div>
+        <div class="indexito">
+            <div class=card id="registrate">
+                <div class="row">
+                    <div class="col-md text-center ">
+                        <h3 id="create-edit-title" class="font-weight-light">
+                            <i class="fa fa-upload"></i> Upload a new photo
+                        </h3>
+                    </div>
+                </div>
+                <hr>
+                <div class="row" id="errors"></div>
+                <div class="row">
+                    <div class="col-md mb-3">
+                        <form id="form-photo-upload">
+                            <div class="form-group">
+                                <label for="input-url">URL:</label>
+                                <input required type="text" class="form-control" id="input-url" name="url"
+                                    placeholder="Photo URL">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-title">Title:</label>
+                                <input required type="text" class="form-control" id="input-title" name="title"
+                                    placeholder="Title">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-description">Description:</label>
+                                <textarea required class="form-control" id="input-description" name="description"
+                                    placeholder="Describe your image..." rows="4"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="radio-inline">
+                                    <input type="radio" id="input-visibility-Public" name="visibility"
+                                        value="Public">Public
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="input-visibility-Private" name="visibility"
+                                        value="Private">Private
+                                </label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md text-center">
+                                    <button class="btn btn-danger col-md-2 p-0" onclick="window.history.back()">
+                                        <i class="fa fa-undo"></i> Cancel
+                                    </button>
+                                    <button type="submit" class="btn btn-success col-md-2 p-0">
+                                        <i class="fa fa-send mr-2 "></i> Send
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-md d-none d-md-block text-center">
+                        <!-- Image preview -->
+                        <img id="image-preview" name="image" class="img-fluid limited-height"
+                            src="https://i.stack.imgur.com/y9DpT.jpg">
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class=card id="registrate">
+                <div class="row">
+                    <div class="col-md text-center ">
+                        <h3 id="create-edit-title" class="font-weight-light">
+                            <i class="fa fa-upload"></i> Crea Categorias
+                        </h3>
+                    </div>
+                </div>
+                <hr>
+    
+                <div class="row">
+                    <div class="col-md mb-3">
+                        <form id="form-category-upload">
+     
+                            <div class="form-group">
+                                <label for="input-title">Titulo de la categoria:</label>
+                                <input required type="text" class="form-control" id="input-name" name="name"
+                                    placeholder="Titulo">
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md text-center">
+                                    <button type="submit" class="btn btn-success col-md-2 p-0">
+                                        <i class="fa fa-send mr-2 "></i> Send
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+    
+                    
+                </div>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </div>
+        </div>
+
+        
+
+
+
+    <script>
+        include("header.html", "#header");
+        include("footer.html", "#footer");
+    </script>
+    </div>
+    <script src="js/header.js" type="module"> </script>
+    <script src="js/register.js" type="module"></script>
+</body>
+
+</html>

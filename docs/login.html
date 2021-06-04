@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title> Inicia Sesión</title>
+    <title> Login </title>
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/utils/include.js"></script>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -10,68 +11,75 @@
     <script src="/js/libs/popper.min.js"></script>
     <script src="/js/libs/bootstrap.min.js"></script>
     <link rel="icon" href="/images/favicon.ico">
+    <script src="js/libs/axios.min.js"></script>
 
 <body>
-    <div id="content2">   
-    <div id="header"></div>
-    <div class="indexito">
-        
-        <div class="card">
-            <br>
-        <div align="center"><h2> Inicia Sesión</h2></div>
-    
-        <hr>
-        <div id="inicia2">
-        <form>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Correo Electrónico</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu correo con nadie más-.</small>
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Contraseña</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
-            </div>
+    <div id="content2">
+        <div id="header"></div>
+        <div class="indexito">
 
-            <div class="d-flex bd-highlight">
-                <div class="p-2 flex-fill bd-highlight">  
-                </div>
-                <div class="p-2 flex-fill bd-highlight">  
-                </div>
-                <div class="p-2 flex-fill bd-highlight">
-                    <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-                </div>
-                <div class="p-2 flex-fill bd-highlight">
+            
 
-                </div>
-                <div class="p-2 flex-fill bd-highlight">
+            
+                <div class=card id="logueate">
+                    <div id="asko">
+                        
+                    <h3 class="col-md text-center font-weight-light">
+                        <i class="fa fa-sign-in"></i> Login
+                    </h3>
 
-                </div>
-                <div class="p-2 flex-fill bd-highlight">  
-                </div>
-                <div class="p-2 flex-fill bd-highlight">
-                    <a href="/register.html" class="btn btn-primary sn" role="button" aria-pressed="true">Registrate aquí</a>
-                </div>
-                <div class="p-2 flex-fill bd-highlight">  
-                    <div class="p-2 flex-fill bd-highlight">  
+                    <div class="row">
+                        <div id="errors" class="form-group col-md"></div>
                     </div>
+                    <form id="login-form">
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <label for="email">Username:</label>
+                                    <div class="input-group">
+                                        <input required type="text" class="form-control" id="username" name="username"
+                                            placeholder="Username">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <label for="password">Password:</label>
+                                    <input required type="password" class="form-control" id="password" name="password"
+                                        placeholder="Password">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md text-center mb-2">
+                                <button type="button" class="btn btn-danger p-0 col-sm-1"
+                                    onclick="window.location.href=`index.html`">
+                                    <i class="fa fa-home"></i><small> Cancel</small>
+                                </button>
+                                <button type="submit" class="btn btn-primary p-0 col-sm-1">
+                                    <i class="fa fa-sign-in"></i><small> Login</small>
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                    <br>
                 </div>
-            </div>
-          </form>
+                </div>
+            
         </div>
+            <div id="footer"></div>
         </div>
-          
-        
-    </div>
-    <div id="footer"></div>
+
+
+
     <script>
         include("header.html", "#header");
         include("footer.html", "#footer");
     </script>
-    </div>
+    <script src="js/header.js" type="module"> </script>
+    <script src="js/login.js" type="module"></script>
 </body>
+
 </html>

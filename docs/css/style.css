@@ -45,6 +45,7 @@ div.header-block {
     padding-right: 15%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 8px;
 }
 
 #title {
@@ -57,7 +58,6 @@ div.header-block {
     font-size: 150%;
     font-family: monospace;
     font-style: italic;
-    margin-top: 0;
 }
 div.footer-block{
     color: #444444;
@@ -114,12 +114,11 @@ div.form-group{
 div.indexito {
     color: #444444;
     text-align: center;
-    padding-top: 1em;
     padding-left: 15%;
     padding-right: 15%;
     margin-left: auto;
     margin-right: auto;
-    
+
 
 }
 div.espacio{
@@ -147,6 +146,7 @@ div.inicioflotante{
 }
 
 
+
 div.color{
     background-color: white;
 }
@@ -154,24 +154,41 @@ div.color{
 #content2{
     background-color: rgba(61, 60, 60, 0.774);
 }
+#centrate{
+    text-align: center;
+    padding: 20px;
+}
 
 
-
-
+#form-photo-upload{
+    padding-right: 10%;
+    padding-left: 10%;
+}
 
 #title {
     font-size: 300%;
     font-family: monospace;
-    margin-top: 0;
+}
+
+#asdasd{
+    display: flex;
+
+}
+#errors {
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 10px;
 }
 
 #subtitle {
     font-size: 150%;
     font-family: monospace;
     font-style: italic;
-    margin-top: 0;
 }
 
+#image-preview{
+    padding: 5%;
+}
 
 div.header-block > a {
     color: #DDD;
@@ -186,14 +203,30 @@ div.justify {
     text-justify: inter-word;
 }
 
+
+
 #xd{
     padding: 15px;
+    margin-bottom: 10%;
 }
 #inicia2{
+    padding-right: 30%;
+    padding-left: 30%;
+}
+
+#registrate{
     padding-right: 10%;
     padding-left: 10%;
 }
+#logueate{
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 10%;
+}
 
+#asko{
+    height: 400px ;
+}
 #fotillo{
     width: 90%;
     height: 90%;
@@ -219,6 +252,18 @@ div.justify {
     padding-left: 10%;
     padding-right: 10%;
 }
+
+#navbarText{
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 110%;
+}
+
+#ajustate{
+    box-sizing: content-box;
+    width: 100%;
+}
+
 
 #blanco{
     color:rgb(255, 255, 255)

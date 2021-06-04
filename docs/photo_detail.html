@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Photo</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/utils/include.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script src="/js/libs/jquery-3.4.1.min.js"></script>
+    <script src="/js/libs/popper.min.js"></script>
+    <script src="/js/libs/bootstrap.min.js"></script>
+    <link rel="icon" href="/images/favicon.ico">
+
+    <script src="/js/libs/axios.min.js"></script>
+
+    <script src="/js/libs/axios.min.js"></script>
+
+
+    <script src="js/photo_detail.js" type="module"></script>
+    <script src="js/header.js" type="module"></script>
+</head>
+<div id="content2">
+
+    <body>
+
+        <div id="header">
+        </div>
+        <div class="indexito">
+            <div class="row text-center">
+                <div class="col-md-8" id="photo-details">
+                    
+                    
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="color">
+                            <br>
+                            <div class="col-sm-12">
+                                <button class="btn btn-danger col-sm-3 p-0" onclick="window.history.back()">
+                                    <i class="fa fa-backward"></i> <small>Back</small>
+                                </button>
+                                <button class="btn btn-primary col-sm-3 p-0" id="button-edit">
+                                    <i class="fa fa-edit"></i> <small>Edit</small>
+                                </button>
+                                <button class="btn btn-secondary col-sm-3 p-0" id="button-delete">
+                                    <i class="fa fa-trash"></i> <small>Delete</small>
+                                </button>
+                            </div>
+                            <br>
+
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card">
+                        <div class="color">
+                            <br>
+                            <h6>Categorias de la foto</h6>
+                            <div id="categoriamodule">
+                            
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card">
+                        <div class="color">
+                            <br>
+                            <h5>Valoracion media de la foto:</h5>
+                            <div id="valoracionMedia">
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card">
+                        <div class="color">
+                            <br>
+                            <h6>Valoraciones </h6>
+                            <div id="commentSection">
+                                <div id="errors" class=""></div>
+                                </li>
+                            </div>
+                            <hr>
+                            <form id="formValorations">
+                                <div class="form-group">
+
+                                    <label for="number-input">Introduzca su valoración del 1 al 5:</label>
+
+                                    <div id="borde7">
+                                        <input type="range" class="form-range" name="number" min="1" max="5"
+                                            id="customRange2">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-success mt-2 p-0 col-sm-3">
+                                    <i class="fa fa-send"></i> <small>Rate</small>
+
+                                </button>
+
+                            </form>
+                            <br>
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card">
+                        <div class="color">
+                            <br>
+                            <h6>Comentarios</h6>
+                            <div id="commentariosModule">
+                                <hr>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card">
+                        <div class="color">
+                            <br>
+                            <h6>Publica tu comentario</h6>
+                            <hr>
+                            <form id="formPublishComment">
+                                <div class="form-group">
+                                    <div id="borde7">
+                                        <label for="input-text">Comentario:</label>
+                                        <input required type="text" class="form-control" id="input-text" name="text"
+                                            placeholder="Escribe tu comentario aquí">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md text-center">
+
+                                        <button type="submit" class="btn btn-success col-md-2 p-0">
+                                            <i class="fa fa-send mr-2 "></i> Enviar
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="card">
+                        <div class="color">
+                            <br>
+                            <h6>Añade categorias</h6>
+                            <hr>
+                            <form id="publishCategory">
+                                <div class="form-group">
+                                    <div id="borde7">
+                                        <input class="text-center" name="name" list="categoryyy" autocomplete="off">
+                                        <datalist id="categoryyy"></datalist>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md text-center">
+
+                                        <button type="submit" class="btn btn-success col-md-2 p-0">
+                                            <i class="fa fa-send mr-2 "></i> Enviar
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                                
+                            </div>
+
+
+                        </div>
+                        <br>
+                        <div class="card">
+                            <div class="color">
+                                <br>
+                                <h6>Quita categorias</h6>
+                                <hr>
+                                <form id="quitCategory">
+                                    <div class="form-group">
+                                        <div id="borde7">
+                                            <input class="text-center" name="name" list="categoryyy" autocomplete="off">
+                                            <datalist id="categoryyy"></datalist>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md text-center">
+    
+                                            <button type="submit" class="btn btn-success col-md-2 p-0">
+                                                <i class="fa fa-backward "></i> Quitar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                                
+                                    
+                                </div>
+    
+    
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div id="footer">
+                </div>
+            </div>
+
+        </div>
+
+
+
+</div>
+<script>
+    include("header.html", "#header");
+    include("footer.html", "#footer");
+</script>
+</body>
+</div>
+
+</html>

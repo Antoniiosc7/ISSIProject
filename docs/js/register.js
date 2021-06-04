@@ -1,33 +1,38 @@
 "use strict";
+import { messageRenderer } from "/js/renderers/messages.js"; 
+import { userValidator } from "/js/validators/users.js"; 
+import { sessionManager } from "/js/utils/session.js";
+import { authAPI } from "/js/api/auth.js"; 
 
-function main(){
-    addHandlerForm();
+document.addEventListener ("DOMContentLoaded", function() {
+    let registerForm = document.getElementById ("register-form");
+    registerForm.onsubmit = function handleSubmitRegister (event) {
+		
+		let formData = new FormData (registerForm);
+		let errors = userValidator.validateRegister(formData); 
+		
+		if ( errors.length > 0) {
+			messageRenderer.showErrorAsAlert(errors.join("<br>"));
+			return false; 
+		} else  {   sendRegister(formData);    
+					return false; 
+		}
+	}		
 }
+); 
 
-function addHandlerForm(){
-    let form = document.getElementById("register-form");
-    form.onsubmit = validateForm;
-
+function sendRegister(formData) { 
+    authAPI.register(formData)
+        .then(loginData=>{    
+                console.log(loginData); 
+                let sessionToken=loginData.sessionToken;
+                let loggedUser=loginData.user;
+                sessionManager.login(sessionToken, loggedUser);
+                alert ("¡Usuario registrado!");
+                window.location.href = "index.html"; 
+        })
+        .catch(error=>{       
+                messageRenderer.showErrorAsAlert(error);
+                console.log(error);
+        });
 }
-
-function validateForm(event){
-    event.preventDefault();
-
-    let form = event.target;
-    let formData = new FormData(form);
-
-    let error = [];
-
-    let firstname = formData.get("firstname");
-    let surname = formData.get("surname");
-    let password1 = formData.get("InputPassword1");
-    let password2 = formData.get("InputPassword2");
-    alert(firstname);
-
-
-
-
-
- }
-
-document.addEventListener("DOMContentLoaded", main);
