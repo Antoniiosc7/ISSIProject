@@ -33,6 +33,8 @@ function main () {
 
     }
 }
+
+
 function seguirUsuario ( event ) {
     event.preventDefault(); 
     let form = event.target;
@@ -92,8 +94,8 @@ function fotosdelperfil(){
             });
 
 } else {
-
-	photoPrivacitysAPI.getById(user2)			
+photoPrivacitysAPI.getBy
+	Id(user2)			
 		.then ( photos => {	
 				let gallery = galleryRenderer.asCardGallery(photos);
 				galleryContainer.appendChild (gallery);
